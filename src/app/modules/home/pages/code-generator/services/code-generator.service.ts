@@ -3,14 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../../../environments/environment';
 import { Observable } from 'rxjs';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CodeGeneratorService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getCodes(): Observable<{ codes: string[] }> {
-    return this.http.get<{ codes: string[] }>(`${environment.apiBaseUrl}/codes`);
+    return this.http.get<{ codes: string[] }>(
+      `${environment.apiBaseUrl}/codes`
+    );
   }
 }

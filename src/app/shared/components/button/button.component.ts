@@ -4,10 +4,10 @@ import { CodeGeneratorService } from '../../../modules/home/pages/code-generator
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-  @Input() color: 'primary' | 'secondary' = "primary";
+  @Input() color: 'primary' | 'secondary' = 'primary';
   @Input() label: string = '';
   @Input() routerLink: string | undefined;
   @Output() buttonClick = new EventEmitter<void>();

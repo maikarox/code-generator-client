@@ -8,17 +8,14 @@ import { SharedModule } from '../../../../shared/shared.module';
 import { CodeGeneratorService } from './services/code-generator.service';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
-  declarations: [
-    CodeGeneratorComponent
-  ],
+  declarations: [CodeGeneratorComponent],
   imports: [
     CommonModule,
     CodeGeneratorRoutingModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
   ],
-  providers: [CodeGeneratorService]
+  providers: [CodeGeneratorService],
 })
-export class CodeGeneratorModule { }
+export class CodeGeneratorModule {}

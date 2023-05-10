@@ -4,15 +4,20 @@ import { HomeComponent } from './home.component';
 
 const routes: Routes = [
   {
-    path: '', component: HomeComponent 
-  }, 
-  { 
-    path: 'code-generator', loadChildren: () => import('./pages/code-generator/code-generator.module').then(m => m.CodeGeneratorModule) 
-  }
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'code-generator',
+    loadChildren: () =>
+      import('./pages/code-generator/code-generator.module').then(
+        (m) => m.CodeGeneratorModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class HomeRoutingModule { }
+export class HomeRoutingModule {}
