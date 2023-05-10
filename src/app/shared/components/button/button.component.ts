@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CodeGeneratorService } from '../../../modules/home/pages/code-generator/services/code-generator.service';
 
 @Component({
   selector: 'app-button',
@@ -8,12 +9,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ButtonComponent {
   @Input() color: 'primary' | 'secondary' = "primary";
   @Input() label: string = '';
-  @Input() clickAction: Function | undefined;
   @Input() routerLink: string | undefined;
+  @Output() buttonClick = new EventEmitter<void>();
 
   onClick(): void {
-    if (this.clickAction) {
-      this.clickAction();
-    }
+    this.buttonClick.emit();
   }
 }
