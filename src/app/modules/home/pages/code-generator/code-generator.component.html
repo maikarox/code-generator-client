@@ -1,1 +1,7 @@
-<p>Code generator page</p>
+<app-header title="Get your codes" />
+<section>
+  <app-box>
+    <app-string-array-iterator [list]="codes" />
+  </app-box>
+  <app-button color="primary" label="Generate codes" (buttonClick)="onButtonClick()" />
+</section>

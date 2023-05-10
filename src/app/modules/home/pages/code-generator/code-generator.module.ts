@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CodeGeneratorRoutingModule } from './code-generator-routing.module';
 import { CodeGeneratorComponent } from './code-generator.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '../../../../shared/shared.module';
 
 import { CodeGeneratorService } from './services/code-generator.service';
 import { HttpClientModule } from '@angular/common/http';

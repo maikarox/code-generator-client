@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class CodeGeneratorService {
   constructor(private http: HttpClient) { }
 
-  getCodes(): Observable<string[]> {
-    return this.http.get<string[]>(`${environment.apiBaseUrl}/codes`);
+  getCodes(): Observable<{ codes: string[] }> {
+    return this.http.get<{ codes: string[] }>(`${environment.apiBaseUrl}/codes`);
   }
 }
