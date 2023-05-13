@@ -12,7 +12,7 @@ import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class ServerErrorInterceptor implements HttpInterceptor {
-  constructor(private errorHandler: GlobalErrorHandler) { }
+  constructor(private errorHandler: GlobalErrorHandler) {}
 
   intercept(req: HttpRequest<unknown>, next: HttpHandler) {
     return next.handle(req).pipe(

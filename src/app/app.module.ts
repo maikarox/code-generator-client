@@ -14,9 +14,9 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     BrowserModule,
     CoreModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
