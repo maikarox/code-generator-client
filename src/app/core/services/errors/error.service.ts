@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +15,10 @@ export class ErrorService {
   }
 
   getServerMessage(error: HttpErrorResponse): string {
-    return error.message;
+    if (!environment.production) {
+      console.error(error.message);
+    }
+
+    return `Sorry, there's been an error processing the action.`;
   }
 }

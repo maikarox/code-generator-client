@@ -15,6 +15,7 @@ import { GlobalErrorHandler } from './handlers/global-error.handler';
       useClass: ServerErrorInterceptor,
       multi: true,
     },
+    GlobalErrorHandler,
   ],
 })
 export class CoreModule {}
